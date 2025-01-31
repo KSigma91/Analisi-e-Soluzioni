@@ -57,7 +57,7 @@
                                 <div class="d-flex justify-content-between modal-footer gap-3 rounded-1">
                                     <button type="button" class="btn btn-outline-secondary btn-block fs-5" data-bs-dismiss="modal">Chiudi</button>
                                     <!-- Submit button -->
-                                    <button type="submit" value="Send" class="btn btn-outline-warning btn-block fs-5" @click="showAlert">Invia</button>
+                                    <button type="submit" value="Send" class="btn btn-outline-warning btn-block fs-5" data-bs-dismiss="modal" @click="showAlert">Invia</button>
                                 </div>
                             </form>
                         </div>
