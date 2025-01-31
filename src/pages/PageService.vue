@@ -6,14 +6,14 @@
                 <li class="service__info d-flex justify-content-center flex-column flex-sm-column flex-md-column flex-lg-row bg-gradient m-4 list-unstyled">
                     <div class="service__text d-flex flex-column justify-content-around m-5 text-wrap text-start">
                         <h2>{{ info.title }}</h2>
-                        <img :src="info.icon" :alt="info.title" class="my-3">
+                        <img :src="info.icon" :alt="info.title" class="my-3" loading="lazy">
                         <p class="fs-5 fw-light">{{ info.text }}</p>
                         <div class="d-block">
                             <div class="btn btn-outline-success btn-block rounded-1 fs-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Contattaci</div>
                         </div>
                     </div>
                     <div>
-                        <video autoplay loop plays-inline :src="info.media" class="w-100 h-100"></video>
+                        <video preload="metadata" autoplay loop plays-inline :src="info.media" class="w-100 h-100"></video>
                     </div>
                 </li>
             </ul>
@@ -158,25 +158,25 @@ export default {
                 {
                     title: "Fotografia e ripresa aerea",
                     icon: require("../assets/Icone-EagleLab.png"),
-                    media: require("../assets/Riprese.webm"),
+                    media: require("../assets/Riprese.mp4"),
                     text: "Ispezione aerea di immobili con punti di accesso assenti o impraticabili, avanzamento lavori e monitoraggio cantieri con drone"
                 },
                 {
                     title: "Aerofotogrammetria",
                     icon: require("../assets/Icone-EagleLab-3d.png"),
-                    media: require("../assets/Aerofotogrammetria.webm"),
+                    media: require("../assets/Aerofotogrammetria.mp4"),
                     text: "Fotogrammetria dell'area ispezionata a mezzo drone"
                 },
                 {
                     title: "Ricostruzione 2D e 3D",
                     icon: require("../assets/Icone-EagleLab-2d-3d.png"),
-                    media: require("../assets/WEB.webm"),
+                    media: require("../assets/Web.mp4"),
                     text: "Riproduzione grafica in scala su programma CAD 2D e software di modellazione 3D"
                 },
                 {
                     title: "Consulenze tecniche",
                     icon: require("../assets/Icone-EagleLab-cons.png"),
-                    media: require("../assets/WEB.webm"),
+                    media: require("../assets/Web.mp4"),
                     text: "Sopralluogo e rilevazione aerea del luogo, teatro del sinistro stradale"
                 }
             ]

@@ -4,38 +4,38 @@
             <h1 class="p-5 text-start">Mavic Air 2S</h1>
             <div class="drone__list card d-flex justify-content-center align-items-center h-100 m-auto p-5 border-0 rounded-1 shadow col-lg-12">
                 <div class="p-0 p-md-5 p-lg-5">
-                    <img src="../assets/eead2358fecb94ceb86d412f4ca4b67d.png" alt="Mavic_Air_2S">
+                    <img src="../assets/eead2358fecb94ceb86d412f4ca4b67d.png" alt="Mavic_Air_2S" loading="lazy">
                 </div>
                 <div class="d-flex flex-wrap justify-content-center">
                     <div v-for="mavic in mavicSpecs" :key="mavic"
                     class="drone__icon d-flex flex-column justify-content-start align-items-center gap-2 p-2 m-3 rounded-4 text-dark">
-                        <img :src="mavic.icon" :alt="mavic.title">
+                        <img :src="mavic.icon" :alt="mavic.title" loading="lazy"> 
                         <big class="fs-4">{{ mavic.title }}</big>
                         <p class="fs-5">{{ mavic.text }}</p>
                     </div>
                 </div>
                 <div class="my-5">
-                    <video width="90%" autoplay loop>
-                        <source src="../assets/EagleLabLoop_Site.webm">
+                    <video width="90%" preload="metadata" autoplay loop>
+                        <source src="../assets/Eaglelabloop Site.mp4">
                     </video>
                 </div>
             </div>
             <h1 class="p-5 text-start">Spark</h1>
             <div class="drone__list card d-flex justify-content-center align-items-center h-100 m-auto p-5 border-0 rounded-1 shadow col-lg-12">
                 <div class="p-0 p-md-5 p-lg-5">
-                    <img src="../assets/toppng.com-dji-spark-top-view-700x608.png" alt="Spark" style="width: 250px">
+                    <img src="../assets/toppng.com-dji-spark-top-view-700x608.png" alt="Spark" style="width: 250px" loading="lazy">
                 </div>
                 <div class="d-flex flex-wrap justify-content-center">
                     <div v-for="spark in sparkSpecs" :key="spark"
                     class="drone__icon d-flex flex-column justify-content-start align-items-center gap-2 p-2 m-3 rounded-4 text-dark">
-                        <img :src="spark.icon" :alt="spark.title">
+                        <img :src="spark.icon" :alt="spark.title" loading="lazy">
                         <big class="fs-4">{{ spark.title }}</big>
                         <p class="fs-5">{{ spark.text }}</p>
                     </div>
                 </div>
                 <div class="my-5">
-                    <video width="90%" autoplay loop>
-                        <source src="../assets/EagleLabLoop_Site.webm">
+                    <video width="90%" preload="metadata" autoplay loop>
+                        <source src="../assets/Eaglelabloop Site.mp4">
                     </video>
                 </div>
             </div>
@@ -48,10 +48,10 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis veniam asperiores quidem? Explicabo corrupti delectus aspernatur similique earum, architecto eaque ea, voluptatum quod repellat tempora velit autem maiores consequuntur!
                     </p>
                 </div>
-                <img src="https://4.img-dpreview.com/files/p/E~C23x0S1333x1000T1200x900~articles/7348982418/j_Dead_Sea_29-12-2018_18.jpeg" alt="">
+                <img src="https://4.img-dpreview.com/files/p/E~C23x0S1333x1000T1200x900~articles/7348982418/j_Dead_Sea_29-12-2018_18.jpeg" alt="" loading="lazy">
             </div>
             <div class="d-flex flex-wrap justify-content-center">
-                <img src="https://4.img-dpreview.com/files/p/E~C23x0S1333x1000T1200x900~articles/7348982418/j_Dead_Sea_29-12-2018_18.jpeg" alt="">
+                <img src="https://4.img-dpreview.com/files/p/E~C23x0S1333x1000T1200x900~articles/7348982418/j_Dead_Sea_29-12-2018_18.jpeg" alt="" loading="lazy">
                 <div class="drone__text d-flex align-items-center order-md-2 p-4 bg-secondary">
                     <p class="fs-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis veniam asperiores quidem? Explicabo corrupti delectus aspernatur similique earum, architecto eaque ea, voluptatum quod repellat tempora velit autem maiores consequuntur!

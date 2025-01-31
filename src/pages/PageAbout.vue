@@ -4,7 +4,7 @@
             <div v-for="(info, index) in pilotProfile" :key="index"
             class="card-profile position-relative d-flex flex-column justify-content-between gap-4 border-0 shadow w-100" style="width: 18rem;">
                 <div class="card-header py-5 border-0 bg-white">
-                    <img class="position-absolute top-0 start-50 translate-middle rounded-circle" :src="info.photo"  :alt="info.name">
+                    <img class="position-absolute top-0 start-50 translate-middle rounded-circle" :src="info.photo"  :alt="info.name" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{{ info.name }}</h3>

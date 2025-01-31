@@ -4,7 +4,7 @@
             <div class="container-fluid position-relative d-flex justify-content-between">
                 <div class="d-flex align-items-center">
                     <a class="navbar-brand ms-3" href="/home">
-                        <img src="../assets/Logo EagleLab_Evento.png" alt="EagleLab-logo">
+                        <img src="../assets/Logo EagleLab_Evento.png" alt="EagleLab-logo" loading="lazy">
                     </a>
                     <h3 class="m-0 mx-2" style="font-family: TT Fors Trial Variable;">
                         Analisi e Soluzioni

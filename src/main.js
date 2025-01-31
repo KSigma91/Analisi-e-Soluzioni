@@ -43,7 +43,23 @@ const routes = [
 
 const router = new VueRouter ({
     routes,
-    mode: 'history'
+    mode: 'hash',
+    scrollBehavior(to, from, savedPosition) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                gsap.to(window, { scrollTo: savedPosition ? savedPosition.y : 0, duration: 1.2, ease: 'power2.out'});
+                resolve();
+            }, 300); // Ritardo per una transizione più naturale
+        });
+    }
+    // scrollBehavior() {
+    //     gsap.to(window, {
+    //         duration: 1,
+    //         scrollTo: { y : 0, autoKill: false },
+    //         ease: 'power2.out'
+    //     });
+    //     return { x: 0, y : 1};
+    // }
 });
 
 export default router;

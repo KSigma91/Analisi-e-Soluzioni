@@ -81,12 +81,12 @@ export default {
             }
         }
 
-        video {
+        // video {
 
-            @media screen and (max-width: 444px) {
-                width: 330px;
-            }
-        }
+        //     @media screen and (max-width: 444px) {
+        //         width: 330px;
+        //     }
+        // }
 
         p {
             padding: 3px 30px;

@@ -2,8 +2,8 @@
     <div>
         <div id="jumbotron" class="position-relative">
             <div class="d-flex">
-                <video width="100%" autoplay loop plays-inline>
-                    <source src="../assets/EagleLabLoop_Site.webm" type="video/webm">
+                <video width="100%" preload="metadata" autoplay loop plays-inline>
+                    <source src="../assets/Eaglelabloop Site.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="position-absolute top-50 start-50 translate-middle text-white">
@@ -42,7 +42,7 @@
             <h1 class="text-start p-5 mt-4">I nostri servizi</h1>
             <div class="services__container d-flex flex-wrap justify-content-center align-items-center gap-4 text-white">
                 <div v-for="(service, index) in serviceList" :key="index" class="services__image position-relative d-flex flex-column bg-dark animate__animated animate__backInUp shadow-sm rounded-1">
-                    <img :src="service.img" :alt="service.title" class="img-fluid opacity-50 shadow">
+                    <img :src="service.img" :alt="service.title" class="img-fluid opacity-50 shadow" loading="lazy">
                     <div class="services__text position-absolute top-50 start-50 translate-middle d-flex flex-column justify-content-start align-items-center p-5 w-100">
                         <h2 class="lh-lg">{{ service.title }}</h2>
                         <p class="fs-5">{{ service.desc }}</p>
@@ -60,7 +60,7 @@
                         <img class="img-fluid rounded-1" :src="card.photo" :alt="card.desc"
                         />
                     </a> -->
-                    <video autoplay loop plays-inline :src="card.video" class="w-100" style="height: 600px"></video>
+                    <video preload="metadata" autoplay loop plays-inline :src="card.video" class="w-100" style="height: 600px"></video>
                 </div>
                 <p class="fs-5">Il 16 Dicembre 2023 si è tenuto presso Best Western Plus Leone di Messapia 
                     Hotel & Conference di Lecce, un evento dedicato all'infortunistica stradale...</p>
@@ -97,7 +97,7 @@ export default {
             cardList: [
                 {
                     id: 0,
-                    video: require('../assets/WEB_02.webm'),
+                    video: require('../assets/Web 02.mp4'),
                     photo: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp",
                     desc: "lorem"
                 },

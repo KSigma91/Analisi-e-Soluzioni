@@ -2,7 +2,7 @@
     <div class="container bg-white bg-gradient gap-5">
         <div class="logo-footer d-flex flex-wrap justify-content-between align-items-center border-bottom">
             <div class="d-flex align-items-center py-4">
-                <img :src="require('@/assets/Logo EagleLab_Evento.png')" alt="EagleLab-footer">
+                <img :src="require('@/assets/Logo EagleLab_Evento.png')" alt="EagleLab-footer" loading="lazy">
                 <h4 class="m-0 mx-4" style="font-family: TT Fors Trial Variable;">
                     Analisi e Soluzioni
                 </h4>
