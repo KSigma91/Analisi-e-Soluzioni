@@ -53,19 +53,19 @@
                         <h6 class="fs-4 text-dark">Link utili</h6>
                     </li>
                     <li class="my-2">
-                        <router-link to="/" class="text-decoration-none fs-5 text-dark">Home</router-link>
+                        <router-link @click="ScrollToPlugin" to="/" class="text-decoration-none fs-5 text-dark">Home</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link to="/service" class="text-decoration-none fs-5 text-dark">Servizi</router-link>
+                        <router-link @click="ScrollToPlugin" to="/service" class="text-decoration-none fs-5 text-dark">Servizi</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link to="/tool" class="text-decoration-none fs-5 text-dark">Strumentazione</router-link>
+                        <router-link @click="ScrollToPlugin" to="/tool" class="text-decoration-none fs-5 text-dark">Strumentazione</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link to="/gallery" class="text-decoration-none fs-5 text-dark">Galleria</router-link>
+                        <router-link @click="ScrollToPlugin" to="/gallery" class="text-decoration-none fs-5 text-dark">Galleria</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link to="/about" class="text-decoration-none fs-5 text-dark">Chi siamo</router-link>
+                        <router-link @click="ScrollToPlugin" to="/about" class="text-decoration-none fs-5 text-dark">Chi siamo</router-link>
                     </li>
                 </ul>
             </div>
@@ -74,8 +74,18 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 export default {
-    name: 'FooterApp'
+    name: 'FooterApp',
+    methods: {
+        ScrollToPlugin() {
+            gsap.to(window, { scrollTo: { x: 0, y : 0 }, duration: 1.2, ease: 'power2.out'});
+        }
+    }
 }
 </script>
 
