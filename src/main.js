@@ -44,6 +44,7 @@ const routes = [
 const router = new VueRouter ({
     routes,
     mode: 'hash',
+    base: process.env.BASE_URL,
     scrollBehavior(to, from, savedPosition) {
         return new Promise((resolve) => {
             setTimeout(() => {
