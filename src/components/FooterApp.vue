@@ -53,19 +53,19 @@
                         <h6 class="fs-4 text-dark">Link utili</h6>
                     </li>
                     <li class="my-2">
-                        <router-link @click="ScrollToPlugin" to="/" class="text-decoration-none fs-5 text-dark">Home</router-link>
+                        <router-link @click.native="ScrollToTop" to="/" class="text-decoration-none fs-5 text-dark">Home</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link @click="ScrollToPlugin" to="/service" class="text-decoration-none fs-5 text-dark">Servizi</router-link>
+                        <router-link @click.native="ScrollToTop" to="/service" class="text-decoration-none fs-5 text-dark">Servizi</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link @click="ScrollToPlugin" to="/tool" class="text-decoration-none fs-5 text-dark">Strumentazione</router-link>
+                        <router-link @click.native="ScrollToTop" to="/tool" class="text-decoration-none fs-5 text-dark">Strumentazione</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link @click="ScrollToPlugin" to="/gallery" class="text-decoration-none fs-5 text-dark">Galleria</router-link>
+                        <router-link @click.native="ScrollToTop" to="/gallery" class="text-decoration-none fs-5 text-dark">Galleria</router-link>
                     </li>
                     <li class="my-2">
-                        <router-link @click="ScrollToPlugin" to="/about" class="text-decoration-none fs-5 text-dark">Chi siamo</router-link>
+                        <router-link @click.native="ScrollToTop" to="/about" class="text-decoration-none fs-5 text-dark">Chi siamo</router-link>
                     </li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@ gsap.registerPlugin(ScrollToPlugin);
 export default {
     name: 'FooterApp',
     methods: {
-        ScrollToPlugin() {
+        ScrollToTop() {
             gsap.to(window, { scrollTo: { x: 0, y : 0 }, duration: 1.2, ease: 'power2.out'});
         }
     }
