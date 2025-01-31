@@ -65,12 +65,12 @@ const router = new VueRouter ({
         if (savedPosition) {
             return savedPosition;
         } else {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    gsap.to(window, { scrollTo: savedPosition ? savedPosition.y : 0, duration: 1.2, ease: 'power2.out'});
-                    resolve();
-                }, 300);
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: { y: 0, autoKill: false }, // Scorri verso l'alto
+                ease: 'power2.out' // Easing per un'animazione fluida
             });
+            return { x: 0, y: 0 };
         }
     } 
 });
