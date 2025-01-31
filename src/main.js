@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueSweetalert2 from 'vue-sweetalert2'
 import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -61,7 +61,7 @@ const router = new VueRouter ({
     //     });
     //     return { x: 0, y : 1};
     // }
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior(savedPosition) {
         if (savedPosition) {
             return savedPosition;
         } else {
