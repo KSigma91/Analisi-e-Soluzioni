@@ -45,14 +45,14 @@ const router = new VueRouter ({
     routes,
     mode: 'hash',
     base: process.env.BASE_URL,
-    scrollBehavior(to, from, savedPosition) {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                gsap.to(window, { scrollTo: savedPosition ? savedPosition.y : 0, duration: 1.2, ease: 'power2.out'});
-                resolve();
-            }, 300); // Ritardo per una transizione più naturale
-        });
-    }
+    // scrollBehavior(to, from, savedPosition) {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             gsap.to(window, { scrollTo: savedPosition ? savedPosition.y : 0, duration: 1.2, ease: 'power2.out'});
+    //             resolve();
+    //         }, 300); // Ritardo per una transizione più naturale
+    //     });
+    // }
     // scrollBehavior() {
     //     gsap.to(window, {
     //         duration: 1,
@@ -61,6 +61,18 @@ const router = new VueRouter ({
     //     });
     //     return { x: 0, y : 1};
     // }
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    gsap.to(window, { scrollTo: savedPosition ? savedPosition.y : 0, duration: 1.2, ease: 'power2.out'});
+                    resolve();
+                }, 300);
+            });
+        }
+    } 
 });
 
 export default router;
