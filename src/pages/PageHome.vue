@@ -46,7 +46,7 @@
                     <div class="services__text position-absolute top-50 start-50 translate-middle d-flex flex-column justify-content-start align-items-center p-5 w-100">
                         <h2 class="lh-lg">{{ service.title }}</h2>
                         <p class="fs-5">{{ service.desc }}</p>
-                        <a href="/service" class="fs-5 text-white animate__animated animate__bounceInLeft"><i class="fas fa-search"></i></a>
+                        <router-link to="/service" class="fs-5 text-white animate__animated animate__bounceInLeft"><i class="fas fa-search"></i></router-link>
                     </div>
                 </div>
             </div>
