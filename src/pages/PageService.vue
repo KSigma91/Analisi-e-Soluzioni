@@ -1,19 +1,19 @@
 <template>
     <div class="pb-5 bg-light bg-gradient">
         <div class="container">
-            <h1 class="p-5 text-start">Esplora i nostri servizi</h1>
+            <h1 class="p-5 text-sm-center text-md-start">Esplora i nostri servizi</h1>
             <ul v-for="(info, index) in serviceInfoList" :key="index" class="container mx-auto">
-                <li class="service__info d-flex justify-content-center flex-column flex-sm-column flex-md-column flex-lg-row bg-gradient m-4 list-unstyled">
-                    <div class="service__text d-flex flex-column justify-content-around m-5 text-wrap text-start">
-                        <h2>{{ info.title }}</h2>
-                        <img :src="info.icon" :alt="info.title" class="my-3" loading="lazy">
-                        <p class="fs-5 fw-light">{{ info.text }}</p>
+                <li class="service__info d-flex justify-content-center flex-column flex-sm-column flex-md-column flex-lg-row my-5 list-unstyled rounded shadow">
+                    <div class="service__text d-flex flex-column justify-content-start m-5 text-wrap text-start text-white">
+                        <h2 class="fw-bold">{{ info.title }}</h2>
+                        <!-- <img :src="info.icon" :alt="info.title" class="my-3" loading="lazy"> -->
+                        <p class="fs-4 lh-1">{{ info.text }}</p>
                         <div class="d-block">
-                            <div class="btn btn-outline-success btn-block rounded-1 fs-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Contattaci</div>
+                            <div class="btn btn-warning btn-block rounded fs-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Contattaci</div>
                         </div>
                     </div>
                     <div>
-                        <video preload="metadata" autoplay loop plays-inline :src="info.media" class="w-100 h-100"></video>
+                        <video preload="metadata" autoplay loop plays-inline :src="info.media" class="w-100 h-100 rounded-end"></video>
                     </div>
                 </li>
             </ul>
@@ -66,14 +66,14 @@
             </div>
             <!-- Area di lavoro -->
             <div class="container mt-5">
-                <h1 class="text-start p-5">Area operativa</h1>
+                <h1 class=" text-sm-center text-md-start p-5">Area operativa</h1>
                 <div class="d-flex justify-content-center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58272.754437622!2d18.178445699999997!3d40.3574811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1737996992279!5m2!1sit!2sit" width="90%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-1"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58272.754437622!2d18.178445699999997!3d40.3574811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1737996992279!5m2!1sit!2sit" width="90%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded shadow"></iframe>
                 </div>
             </div>
             <!-- FAQ -->
             <div class="container mt-5">
-                <h2 class="p-5 text-start">Domande frequenti (FAQ)</h2>
+                <h2 class="text-sm-center text-md-start p-5">Domande frequenti (FAQ)</h2>
             </div>
             <div class="accordion accordion-flush fst-italic container" id="accordionFlushExample">
                 <div class="accordion-item">
@@ -157,25 +157,25 @@ export default {
             serviceInfoList: [
                 {
                     title: "Fotografia e ripresa aerea",
-                    icon: require("../assets/Icone-EagleLab.png"),
+                    // icon: require("../assets/Icone-EagleLab.png"),
                     media: require("../assets/Riprese.mp4"),
                     text: "Ispezione aerea di immobili con punti di accesso assenti o impraticabili, avanzamento lavori e monitoraggio cantieri con drone"
                 },
                 {
                     title: "Aerofotogrammetria",
-                    icon: require("../assets/Icone-EagleLab-3d.png"),
+                    // icon: require("../assets/Icone-EagleLab-3d.png"),
                     media: require("../assets/Aerofotogrammetria.mp4"),
                     text: "Fotogrammetria dell'area ispezionata a mezzo drone"
                 },
                 {
                     title: "Ricostruzione 2D e 3D",
-                    icon: require("../assets/Icone-EagleLab-2d-3d.png"),
+                    // icon: require("../assets/Icone-EagleLab-2d-3d.png"),
                     media: require("../assets/Web.mp4"),
                     text: "Riproduzione grafica in scala su programma CAD 2D e software di modellazione 3D"
                 },
                 {
                     title: "Consulenze tecniche",
-                    icon: require("../assets/Icone-EagleLab-cons.png"),
+                    // icon: require("../assets/Icone-EagleLab-cons.png"),
                     media: require("../assets/Web.mp4"),
                     text: "Sopralluogo e rilevazione aerea del luogo, teatro del sinistro stradale"
                 }
@@ -215,28 +215,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    // width: 100%; 
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 3rem;
+    }
 
+    h2 {
+        font-size: 2rem;
+    }
+} 
+
+.container {
     .service__info {
-        background-color: #ECEFF1;
+        background-color: #131921;
     
         .service__text {
-            width: 80%;
+            width: 70%;
         }
         
         h2, p {
             font-weight: 100;
-            color: #37474F;
-    
-            // @media screen and (max-width: 575px) {
-            //     font-size: 1.5rem;
-            // }
         }
     
         p {
             padding: 3px 30px;
             border-left: 4px solid #f5bc41;
+            color: #b8bac9;
     
                 @media screen and (max-width: 575px) {
                     font-size: .8rem;
@@ -253,7 +257,6 @@ export default {
         }
         video {
             object-fit: cover;
-            max-width: 100%;
         }
     }
 

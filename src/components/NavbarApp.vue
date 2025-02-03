@@ -6,9 +6,9 @@
                     <a class="navbar-brand ms-3" href="/home">
                         <img src="../assets/Logo EagleLab_Evento.png" alt="EagleLab-logo" loading="lazy">
                     </a>
-                    <h3 class="m-0 mx-2" style="font-family: TT Fors Trial Variable;">
+                    <h2 class="m-0 mx-2 fw-semibold">
                         Analisi e Soluzioni
-                    </h3>
+                    </h2>
                 </div>
                
             </div>

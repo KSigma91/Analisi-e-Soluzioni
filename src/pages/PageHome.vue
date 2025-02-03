@@ -1,24 +1,24 @@
 <template>
     <div>
         <div id="jumbotron" class="position-relative">
-            <div class="d-flex">
+            <div class="d-block bg-dark">
                 <video width="100%" preload="metadata" autoplay loop plays-inline>
                     <source src="../assets/Eaglelabloop Site.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="position-absolute top-50 start-50 translate-middle text-white">
-                <p class="fs-2">
+            <div class="position-absolute top-50 translate-middle text-white text-start" style="left: 40%">
+                <bold class="lh-1 display-1">
                     Non hai visto un albero finchè non hai visto la sua ombra dal cielo
-                </p>
-                <hr class="m-auto my-2 opacity-100">
-                <small class="fs-5">Amelia Earhart</small>
+                </bold>
+                <hr class="my-2 opacity-100">
+                <small class="fs-4">Amelia Earhart</small>
             </div>
             <!-- <div class="container-fluid h-25"></div> -->
             <div id="gradient"></div>
         </div>
         <div class="tools__container d-flex justify-content-center justify-content-md-center justify-content-lg-start align-items-center">
-            <div class="tools__items d-flex flex-column align-items-md-center align-items-lg-start gap-3 text-start text-white lh-base">
-                <h1>
+            <div class="tools__items d-flex flex-column align-items-md-center align-items-lg-start mx-5 gap-3 text-start text-white lh-base">
+                <h1 class="fs-1">
                     Droni all'avanguardia
                 </h1>
                 <p class="fs-4">
@@ -28,8 +28,8 @@
             </div>
         </div>
         <div class="pilot__container d-flex justify-content-center justify-content-md-center justify-content-lg-end align-items-center">
-            <div class="pilot__items d-flex flex-column align-items-md-center align-items-lg-start gap-3 text-start text-white lh-base">
-                <h1>
+            <div class="pilot__items d-flex flex-column align-items-md-center align-items-lg-start mx-5 gap-3 text-start text-white lh-base">
+                <h1 class="fs-1">
                     Piloti APR certificati
                 </h1>
                 <p class="fs-4">
@@ -39,13 +39,13 @@
             </div>
         </div>
         <div class="container mt-5">
-            <h1 class="text-start p-5 mt-4">I nostri servizi</h1>
+            <h1 class="text-sm-center text-md-start p-5 mt-4">I nostri servizi</h1>
             <div class="services__container d-flex flex-wrap justify-content-center align-items-center gap-4 text-white">
                 <div v-for="(service, index) in serviceList" :key="index" class="services__image position-relative d-flex flex-column bg-dark animate__animated animate__backInUp shadow-sm rounded-1">
                     <img :src="service.img" :alt="service.title" class="img-fluid opacity-50 shadow" loading="lazy">
                     <div class="services__text position-absolute top-50 start-50 translate-middle d-flex flex-column justify-content-start align-items-center p-5 w-100">
-                        <h2 class="lh-lg">{{ service.title }}</h2>
-                        <p class="fs-5">{{ service.desc }}</p>
+                        <h2 class="lh-lg text-warning">{{ service.title }}</h2>
+                        <p class="fs-4 lh-1">{{ service.desc }}</p>
                         <router-link to="/service" class="fs-5 text-white animate__animated animate__bounceInLeft"><i class="fas fa-search"></i></router-link>
                     </div>
                 </div>
@@ -53,14 +53,14 @@
         </div>
         <!-- Evento Infortunistica Stradale "Analisi e Soluzioni" -->
          <div class="container mt-5">
-            <h1 class="text-start p-5 mt-4">Infortunistica Stradale "Analisi e Soluzioni"</h1>
+            <h1 class="text-sm-center text-md-start p-5 mt-4">Infortunistica Stradale "Analisi e Soluzioni"</h1>
             <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
                 <div v-for="card in cardList" :key="card" class="event__media">
                     <!-- <a :href="card.photo">
                         <img class="img-fluid rounded-1" :src="card.photo" :alt="card.desc"
                         />
                     </a> -->
-                    <video preload="metadata" autoplay loop plays-inline :src="card.video" class="w-100" style="height: 600px"></video>
+                    <video preload="metadata" autoplay loop plays-inline :src="card.video" class="w-100 shadow" style="height: 600px"></video>
                 </div>
                 <p class="fs-5">Il 16 Dicembre 2023 si è tenuto presso Best Western Plus Leone di Messapia 
                     Hotel & Conference di Lecce, un evento dedicato all'infortunistica stradale...</p>
@@ -148,14 +148,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+} 
+
 #jumbotron {
 
     video {
-        //width: 100%;
         height: 90vh;
         object-fit: cover;
-        image-rendering:pixelated;
-        //object-position: top;
+        image-rendering: smooth;
+        opacity: 60%;
 
         @media screen and (max-width: 768px) {
             height: 70vh;
@@ -200,15 +209,11 @@ export default {
     }
 
     .tools__items {
-        margin: 0 100px;
-
-        h2 {
-            color: #f5bc41;
-        }
+        //margin: 0 100px;
 
         p {
             padding: 3px 30px;
-            border-left: 4px solid #fff;
+            border-left: 4px solid #f5bc41;
             font-weight: 100;
 
             @media screen and (max-width: 849px) {
@@ -244,7 +249,7 @@ export default {
     }
 
     .pilot__items {
-        margin: 0 100px;
+        //margin: 0 100px;
 
         p {
             padding: 3px 30px;
@@ -289,7 +294,6 @@ export default {
         .services__text {
 
             h2 {
-                color: #f5bc41;
                 font-weight: 500;
             }
 

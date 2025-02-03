@@ -1,13 +1,13 @@
 <template>
     <div class="drone__media container p-0 mx-auto mt-0 mb-5">
-        <h1 class="text-start p-5 mt-5">Media</h1>
+        <h1 class="text-sm-center text-md-start p-5 mt-5">Media</h1>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner rounded-1">
                 <div class="carousel-item active">
-                    <img src="../assets/Immagine_01.png" class="d-block w-100" alt="" loading="lazy">
+                    <img src="../assets/Immagine_01.png" class="d-block w-100 shadow" alt="" loading="lazy">
                 </div>
                 <div v-for="(photo, index) in mediaList" :key="index" class="carousel-item">
-                    <img :src="photo.img" class="d-block w-100" alt="" loading="lazy">
+                    <img :src="photo.img" class="d-block w-100 shadow" alt="" loading="lazy">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -59,6 +59,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+} 
+
 .drone__media {
     margin-top: 180px;
     padding: 0 130px;

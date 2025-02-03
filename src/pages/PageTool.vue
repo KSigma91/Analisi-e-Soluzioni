@@ -1,7 +1,7 @@
 <template>
     <div class="drone__container">
         <div class="container">
-            <h1 class="p-5 text-start">Mavic Air 2S</h1>
+            <h1 class="text-sm-center text-md-start p-5">Mavic Air 2S</h1>
             <div class="drone__list card d-flex justify-content-center align-items-center h-100 m-auto p-5 border-0 rounded-1 shadow col-lg-12">
                 <div class="p-0 p-md-5 p-lg-5">
                     <img src="../assets/eead2358fecb94ceb86d412f4ca4b67d.png" alt="Mavic_Air_2S" loading="lazy">
@@ -20,7 +20,7 @@
                     </video>
                 </div>
             </div>
-            <h1 class="p-5 text-start">Spark</h1>
+            <h1 class="text-sm-center text-md-start p-5">Spark</h1>
             <div class="drone__list card d-flex justify-content-center align-items-center h-100 m-auto p-5 border-0 rounded-1 shadow col-lg-12">
                 <div class="p-0 p-md-5 p-lg-5">
                     <img src="../assets/toppng.com-dji-spark-top-view-700x608.png" alt="Spark" style="width: 250px" loading="lazy">
@@ -117,6 +117,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+} 
 .drone__container {
     width: 100%;
     height: 100%;
