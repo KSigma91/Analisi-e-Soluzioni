@@ -3,8 +3,8 @@
         <div class="logo-footer d-flex flex-wrap justify-content-between align-items-center border-bottom">
             <div class="d-flex align-items-center py-4">
                 <img :src="require('@/assets/Logo EagleLab_Evento.png')" alt="EagleLab-footer">
-                <h4 class="m-0 mx-4" style="font-family: TT Fors Trial Variable;">
-                    Analisi e Soluzioni
+                <h4 class="m-0 mx-3" style="font-family: TT Fors Trial Variable;">
+                    AMG Lab
                 </h4>
             </div>
             <ul class="d-flex flex-wrap align-items-center gap-3 list-unstyled fs-2 m-0 ms-2 py-4">

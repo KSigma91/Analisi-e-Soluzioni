@@ -6,8 +6,8 @@
                     <a class="navbar-brand ms-3" href="/home">
                         <img src="../assets/Logo EagleLab_Evento.png" alt="EagleLab-logo">
                     </a>
-                    <h3 class="m-0 mx-2" style="font-family: TT Fors Trial Variable;">
-                        Analisi e Soluzioni
+                    <h3 class="m-0 mx-1" style="font-family: TT Fors Trial Variable;">
+                        AMG Lab
                     </h3>
                 </div>
                
