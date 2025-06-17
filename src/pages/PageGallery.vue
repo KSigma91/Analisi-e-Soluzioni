@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="container pt-5">
+        <h1 class="text-sm-center text-md-start p-5">Media</h1>
         <CardImage />
     </div>
 </template>

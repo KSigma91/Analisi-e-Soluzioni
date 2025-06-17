@@ -1,75 +1,76 @@
 <template>
-    <div class="container bg-white bg-gradient gap-5">
-        <div class="logo-footer d-flex flex-wrap justify-content-between align-items-center border-bottom">
-            <div class="d-flex align-items-center py-4">
-                <img :src="require('@/assets/Logo EagleLab_Evento.png')" alt="EagleLab-footer" loading="lazy">
-                <h3 class="m-0 mx-3 fw-semibold">
-                    AMG Lab
-                </h3>
-            </div>
-            <ul class="d-flex flex-wrap align-items-center gap-3 list-unstyled fs-2 m-0 ms-2 py-4">
-                <li>
-                    <h4 class="m-0">Seguici su: </h4>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/eagledrones.salento.9"><i class="fab fa-facebook text-secondary"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/andrea-guidotti-1a204224b/"><i class="fab fa-linkedin text-secondary"></i></a>
-                </li>
-            </ul>
-        </div>
-        <div class="d-flex flex-wrap py-5">
-            <div class="col text-start me-5 mb-3">
-                <ul class="list-unstyled">
+    <div class="gap-5" style="background-color: #232f3e; color: #dddddd;">
+        <div class="container-fluid d-flex flex-wrap justify-content-center justify-content-md-start justify-content-lg-center gap-5 py-5">
+            <div class="text-start mb-3" style="width: 250px">
+                <ul class="list-unstyled lh-lg">
                     <li class="mb-3">
-                        <h6 class="fs-4 text-dark">Contatti</h6>
+                        <h6 class="fs-4">Contatti</h6>
                     </li>
-                    <li class="fs-5">
-                        <i class="fas fa-map-marker-alt me-3"></i>
+                    <li class="d-flex align-items-center fs-5">
+                        <i class="fas fa-map-marker-alt me-4"></i>
                         Lecce, 73100
                     </li>
-                    <li class="d-flex align-items-center my-2 fs-5">
-                        <i class="fas fa-at me-3"></i>
-                        <div class="lh-base">
-                            alessio.montinaro16@pec.it<br> andrea_guidotti@pec.it
-                        </div>
-                    </li>
-                    <li class="d-flex align-items-center my-2 fs-5">
+                    <li class="d-flex align-items-center fs-5">
                         <i class="fas fa-envelope me-3"></i>
-                        <div class="lh-base">
-                            alessio.montinaro16@gmail.com<br> andrea19912014@gmail.com
+                        <div>
+                            amglab.info@gmail.com
                         </div>
                     </li>
-                    <li class="my-2 fs-5">
+                    <li class="d-flex align-items-center fs-5">
                         <i class="fas fa-phone-alt me-3"></i>
                         389 6821133 - 328 7264874
                     </li>
                 </ul>
             </div>
-            <div class="col text-start">
-                <ul class="list-unstyled fw-light">
+            <div class="text-start mb-3" style="width: 250px">
+                <ul class="list-unstyled lh-lg fw-light">
                     <li class="mb-3">
-                        <h6 class="fs-4 text-dark">Link utili</h6>
+                        <h6 class="fs-4">Link utili</h6>
                     </li>
-                    <li class="my-2">
-                        <router-link @click.native="ScrollToTop" to="/" class="text-decoration-none fs-5 text-dark">Home</router-link>
+                    <li>
+                        <router-link @click.native="ScrollToTop" to="/" class="text-decoration-none fs-5" style="color: #dddddd;">Home</router-link>
                     </li>
-                    <li class="my-2">
-                        <router-link @click.native="ScrollToTop" to="/service" class="text-decoration-none fs-5 text-dark">Servizi</router-link>
+                    <li>
+                        <router-link @click.native="ScrollToTop" to="/service" class="text-decoration-none fs-5" style="color: #dddddd;">Servizi</router-link>
                     </li>
-                    <li class="my-2">
-                        <router-link @click.native="ScrollToTop" to="/tool" class="text-decoration-none fs-5 text-dark">Strumentazione</router-link>
+                    <li>
+                        <router-link @click.native="ScrollToTop" to="/gallery" class="text-decoration-none fs-5" style="color: #dddddd;">Galleria</router-link>
                     </li>
-                    <li class="my-2">
-                        <router-link @click.native="ScrollToTop" to="/gallery" class="text-decoration-none fs-5 text-dark">Galleria</router-link>
+                    <li>
+                        <router-link @click.native="ScrollToTop" to="/about" class="text-decoration-none fs-5" style="color: #dddddd;">Chi siamo</router-link>
                     </li>
-                    <li class="my-2">
-                        <router-link @click.native="ScrollToTop" to="/about" class="text-decoration-none fs-5 text-dark">Chi siamo</router-link>
+                    <li>
+                        <router-link @click.native="ScrollToTop" to="/contacts" class="text-decoration-none fs-5" style="color: #dddddd;">Contatti</router-link>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-start mb-3" style="width: 250px">
+                <ul class="d-flex gap-3 list-unstyled">
+                    <li>
+                        <h6 class="m-0 fs-4">Seguici su: </h6>
+                    </li>
+                    <li class="fs-3">
+                        <a href="https://www.facebook.com/eagledrones.salento.9"><i class="fab fa-facebook text-secondary"></i></a>
+                    </li>
+                    <li class="fs-3">
+                        <a href="https://www.linkedin.com/in/andrea-guidotti-1a204224b/"><i class="fab fa-linkedin text-secondary"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- sezione logo -->
+        <div class="logo-footer">
+            <hr style="opacity: 10%">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="d-inline-flex align-items-center pb-3">
+                    <img :src="require('@/assets/Logo-AMGLab_Footer.png')" alt="EagleLab-footer" loading="lazy">
+                    <h4 class="m-0 mx-2 fw-semibold">
+                        AMG Lab
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark py-3">aggiungere la privacy policy</div>
     </div>
 </template>
 
@@ -94,7 +95,7 @@ export default {
 
     img {
         width: auto;
-        height: 50px;
+        height: 40px;
     }
 }
 

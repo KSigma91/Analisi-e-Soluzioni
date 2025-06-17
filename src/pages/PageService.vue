@@ -1,68 +1,23 @@
 <template>
     <div class="pb-5 bg-light bg-gradient">
-        <div class="container">
+        <div class="container pt-5">
             <h1 class="p-5 text-sm-center text-md-start">Esplora i nostri servizi</h1>
             <ul v-for="(info, index) in serviceInfoList" :key="index" class="container mx-auto">
-                <li class="service__info d-flex justify-content-center flex-column flex-sm-column flex-md-column flex-lg-row my-5 list-unstyled rounded shadow">
+                <li class="service__info d-flex justify-content-center flex-column flex-sm-column flex-md-column flex-lg-row mb-5 list-unstyled rounded shadow">
                     <div class="service__text d-flex flex-column justify-content-start m-5 text-wrap text-start text-white">
-                        <h2 class="fw-bold">{{ info.title }}</h2>
+                        <h2 class="fw-bold mb-4">{{ info.title }}</h2>
                         <!-- <img :src="info.icon" :alt="info.title" class="my-3" loading="lazy"> -->
                         <p class="fs-4 lh-1">{{ info.text }}</p>
-                        <div class="d-block">
-                            <div class="btn btn-warning btn-block rounded fs-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Contattaci</div>
-                        </div>
+                        
                     </div>
                     <div>
                         <video preload="metadata" autoplay loop plays-inline :src="info.media" class="w-100 h-100 rounded-end"></video>
                     </div>
                 </li>
             </ul>
-            <!-- Form invio messaggio -->
-            <div class="modal fade" id="exampleModal" href="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" >
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nuovo Messaggio</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body fs-6">
-                            <form ref="form" method="post" @submit.prevent="sendMail">
-                                <div class="">
-                                    <!-- Name input -->
-                                    <div class="form-outline mb-4 text-start">
-                                        <label class="form-label fst-italic" for="name">Nome <span class="text-danger">*</span></label>
-                                        <input type="text" id="name" name="name" class="form-control rounded-0" v-model="name" required />
-                                    </div>
-                                    <!-- Lastname input -->
-                                    <div class="form-outline mb-4 text-start">
-                                        <label class="form-label fst-italic" for="lastname">Cognome <span class="text-danger">*</span></label>
-                                        <input type="text" id="lastname" name="lastname" class="form-control rounded-0" v-model="lastname" required />
-                                    </div>
-                                    <!-- Email input -->
-                                    <div class="form-outline mb-4 text-start">
-                                        <label class="form-label fst-italic" for="email">Email <span class="text-danger">*</span></label>
-                                        <input type="email" id="email" name="email" class="form-control rounded-0" v-model="email" required />
-                                    </div>
-                                    <!-- Phone input -->
-                                    <div class="form-outline mb-4 text-start">
-                                        <label class="form-label fst-italic" for="phone">Cellulare</label>
-                                        <input type="tel" id="phone" name="phone" class="form-control rounded-0" v-model="phone" />
-                                    </div>
-                                </div>
-                                <!-- Message input -->
-                                <div class="form-outline mb-4 text-start">
-                                    <label class="form-label fst-italic" for="message">Messaggio</label>
-                                    <textarea type="text" id="message" name="message" class="form-control rounded-0" rows="8" v-model="message" required></textarea>
-                                </div>
-                                <div class="d-flex justify-content-between modal-footer gap-3 rounded-1">
-                                    <button type="button" class="btn btn-outline-secondary btn-block fs-5" data-bs-dismiss="modal">Chiudi</button>
-                                    <!-- Submit button -->
-                                    <button type="submit" value="Send" class="btn btn-outline-warning btn-block fs-5" data-bs-dismiss="modal" @click="showAlert">Invia</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <!-- Tasto contattaci, indirizza direttamente alla pagina -->
+            <div class="d-block py-5">
+                <router-link @click.native="ScrollToTop" class="btn btn-warning btn-block rounded fs-4" to="/contacts">Contattaci</router-link>
             </div>
             <!-- Area di lavoro -->
             <div class="container mt-5">
@@ -78,7 +33,7 @@
             <div class="accordion accordion-flush fst-italic container" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed fw-semibold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             Quali sono i tempi di consegna per un progetto?
                         </button>
                     </h2>
@@ -88,7 +43,7 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed fw-semibold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             Che tipo di droni/strumentazione viene utilizzata?
                         </button>
                     </h2>
@@ -98,7 +53,7 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed fw-semibold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                             È necessario un sopralluogo iniziale?
                         </button>
                     </h2>
@@ -147,8 +102,10 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser'; 
-import Swal from 'sweetalert2' 
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default {
     name: 'PageService',
@@ -179,36 +136,12 @@ export default {
                     media: require("../assets/Web.mp4"),
                     text: "Sopralluogo e rilevazione aerea del luogo, teatro del sinistro stradale"
                 }
-            ]
+            ],
         }
     },
     methods: {
-        sendMail(event) {
-            event.preventDefault();
-            emailjs.sendForm('service_z746n4j', 'template_rnslkem', this.$refs.form, 'zv6jTrcK-qf47MfQb')
-            .then((result) => {
-                console.log('Success', result.status, result.text);
-            }, (error) => {
-                console.log('Error', error);
-            });
-            event.target.reset();
-        },
-        showAlert() {
-            if (!this.name || !this.lastname || !this.email.includes('@') || !this.email.includes('.') || !this.message) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Si è verificato un errore',
-                    text: 'Invio messaggio non riuscito',
-                    confirmButtonColor: '#3085d6'
-                });
-            } else {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Ben fatto!',
-                    text: 'Messaggio inviato con successo',
-                    confirmButtonColor: '#3085d6'
-                });
-            }
+        ScrollToTop() {
+            gsap.to(window, { scrollTo: { x: 0, y : 0 }, duration: 1.2, ease: 'power2.out'});
         }
     }
 }

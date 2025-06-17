@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollToPlugin)
 
 import Home from './pages/PageHome.vue'
 import Service from './pages/PageService.vue'
-import Tool from './pages/PageTool.vue'
 import Gallery from './pages/PageGallery.vue'
 import About from './pages/PageAbout.vue'
+import Contacts from './pages/PageContacts.vue'
 
 const routes = [
     {
@@ -25,11 +25,6 @@ const routes = [
         component: Service
     },
     {
-        path: '/tool',
-        name: 'tool',
-        component: Tool
-    },
-    {
         path: '/gallery',
         name: 'gallery',
         component: Gallery
@@ -38,6 +33,11 @@ const routes = [
         path: '/about',
         name: 'about',
         component: About
+    },
+    {
+        path: '/contacts',
+        name: 'contacts',
+        component: Contacts
     }
 ];
 

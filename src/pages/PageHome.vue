@@ -24,7 +24,6 @@
                 <p class="fs-4">
                     per svolgere al meglio attività di rilievo, ispezioni, fotogrammetria e servizi fotografici
                 </p>
-                <router-link to="/tool" class="btn btn-outline-warning btn-block px-4 py-2 rounded-1 border border-warning border-2 text-light fs-5 fw-light">Scopri di più</router-link>
             </div>
         </div>
         <div class="pilot__container d-flex justify-content-center justify-content-md-center justify-content-lg-end align-items-center">
@@ -60,10 +59,10 @@
                         <img class="img-fluid rounded-1" :src="card.photo" :alt="card.desc"
                         />
                     </a> -->
+                    <p class="fs-5">Il 16 Dicembre 2023 si è tenuto presso Best Western Plus Leone di Messapia 
+                        Hotel & Conference di Lecce, un evento dedicato all'infortunistica stradale...</p>
                     <video preload="metadata" autoplay loop plays-inline :src="card.video" class="w-100 shadow" style="height: 600px"></video>
                 </div>
-                <p class="fs-5">Il 16 Dicembre 2023 si è tenuto presso Best Western Plus Leone di Messapia 
-                    Hotel & Conference di Lecce, un evento dedicato all'infortunistica stradale...</p>
             </div>
          </div>
         <!--  -->

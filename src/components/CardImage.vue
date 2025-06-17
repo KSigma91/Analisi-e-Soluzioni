@@ -1,6 +1,5 @@
 <template>
     <div class="drone__media container p-0 mx-auto mt-0 mb-5">
-        <h1 class="text-sm-center text-md-start p-5 mt-5">Media</h1>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner rounded-1">
                 <div class="carousel-item active">

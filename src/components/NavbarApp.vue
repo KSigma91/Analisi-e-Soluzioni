@@ -27,15 +27,15 @@
                             </li>
                             <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <router-link class="nav-link fs-5" to="/service">Servizi</router-link>
-                            </li>
-                            <li class="nav-item" data-bs-dismiss="offcanvas">
-                                <router-link class="nav-link fs-5" to="/tool">Strumentazione</router-link>
-                            </li>
+                            </li>                           
                             <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <router-link class="nav-link fs-5" to="/gallery">Galleria</router-link>
                             </li>
                             <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <router-link class="nav-link fs-5" to="/about">Chi siamo</router-link>
+                            </li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
+                                <router-link class="nav-link fs-5" to="/contacts">Contatti</router-link>
                             </li>
                         </ul>
                     </div>
